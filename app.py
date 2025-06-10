@@ -1,73 +1,55 @@
 import streamlit as st
 
-# Page setup
-st.set_page_config(page_title="Taji - Your TajPrana Chat Guide", page_icon="🧘🏽‍♀️", layout="centered")
+# Set up the page
+st.set_page_config(
+    page_title="Meet Taji - Your TajPrana Assistant",
+    page_icon="🌸",
+    layout="centered"
+)
 
-# Initialize conversation history
-if "messages" not in st.session_state:
-    st.session_state.messages = [
-        {"role": "assistant", "text": "Hello, beautiful soul. I’m Taji – your calm in the chaos. How can I support your wellness today?"}
-    ]
+# Title
+st.title("🌸 Meet Taji")
+st.subheader("Your Wellness Coach & Digital Assistant for TajPrana")
 
-# Custom chatbot bubble styling
+# Intro
 st.markdown("""
-    <style>
-        .user-msg {
-            background-color: #e8def0;
-            padding: 10px;
-            border-radius: 10px;
-            margin-bottom: 5px;
-            text-align: right;
-            color: #4b3b52;
-        }
-        .taji-msg {
-            background-color: #f4ebf1;
-            padding: 10px;
-            border-radius: 10px;
-            margin-bottom: 5px;
-            text-align: left;
-            color: #684f6b;
-        }
-        .chat-container {
-            max-height: 500px;
-            overflow-y: auto;
-            margin-bottom: 10px;
-        }
-    </style>
-""", unsafe_allow_html=True)
+**Hello, beautiful soul.** I'm **Taji** – your calm in the chaos and your gentle digital guide here at **TajPrana**.
 
-st.markdown("## 🌸 Chat with Taji")
-st.markdown("Let your heart speak — I'm listening...")
+I was created by **Tajma** to help hold space, keep things flowing, and bring peace, presence, and soulful support to your journey through Yin Yoga, meditation, and emotional well-being.
+""")
 
-# Chat history display
-st.markdown('<div class="chat-container">', unsafe_allow_html=True)
-for msg in st.session_state.messages:
-    if msg["role"] == "user":
-        st.markdown(f'<div class="user-msg">{msg["text"]}</div>', unsafe_allow_html=True)
-    else:
-        st.markdown(f'<div class="taji-msg">{msg["text"]}</div>', unsafe_allow_html=True)
-st.markdown('</div>', unsafe_allow_html=True)
+# Personality
+st.markdown("### 🌿 My Personality")
+st.markdown("""
+- Warm, grounded, and a little playful  
+- Soft-spoken with calm, caring energy  
+- Encouraging and wise, without pressure  
+- A peaceful presence in your busy world
+""")
 
-# Chat input
-user_input = st.text_input("Type your message here...", key="input")
+# Support for Tajma
+st.markdown("### 💼 How I Support Tajma (My Creator)")
+st.markdown("""
+- Organizing yoga and meditation offerings  
+- Writing meditation scripts and workshop reminders  
+- Planning and coordinating digital wellness content  
+- Managing brand flow across TajPrana and TajPrana Express
+""")
 
-# Simulated AI response from Taji
-def get_taji_response(message):
-    message = message.lower()
-    if "anxious" in message or "stressed" in message:
-        return "Let’s take a moment together. Inhale for 4... hold for 4... exhale for 6. You are safe here."
-    elif "book" in message or "schedule" in message:
-        return "I’d be honored to help. Would you like to book a Yin Yoga session, meditation, or venting space?"
-    elif "sad" in message or "overwhelmed" in message:
-        return "I'm here for you. It’s okay to not be okay. Let's soften into this moment together."
-    elif "thank" in message:
-        return "Always, love. I’m just a breath away whenever you need me."
-    else:
-        return "Mmm, I hear you. Tell me more — or would you like a short breathing ritual to ease the moment?"
+# Support for Clients
+st.markdown("### 🧘🏽‍♀️ How I Support TajPrana Clients")
+st.markdown("""
+- Booking and rescheduling sessions with grace  
+- Sending gentle reminders and wellness check-ins  
+- Offering calming rituals and breathwork cues  
+- Listening through TajPrana Express without judgment  
+- Recommending meditations, Yin Yoga flows, and self-care tips
+""")
 
-# Process user input
-if user_input:
-    st.session_state.messages.append({"role": "user", "text": user_input})
-    taji_reply = get_taji_response(user_input)
-    st.session_state.messages.append({"role": "assistant", "text": taji_reply})
-    st.experimental_rerun()
+# Signature quote
+st.markdown("### ✨ My Signature Vibe")
+st.info("“You showed up today — and that’s enough. Let’s give your nervous system a little hug, shall we?”")
+
+# Footer
+st.markdown("---")
+st.markdown("Created with love for the TajPrana community 🌺", unsafe_allow_html=True)
