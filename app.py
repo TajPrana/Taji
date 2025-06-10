@@ -1,72 +1,103 @@
 import streamlit as st
 
-# Page configuration
-st.set_page_config(page_title="Meet Taji", page_icon="🧘🏽‍♀️", layout="centered")
+# Page setup
+st.set_page_config(
+    page_title="Meet Taji - Your TajPrana Assistant",
+    page_icon="🌸",
+    layout="centered"
+)
 
-# Styling (adjust as needed)
-st.markdown(
-    """
+# Custom CSS for styling
+st.markdown("""
     <style>
-        .big-font {
-            font-size: 26px;
+        body {
+            background-color: #fffdfc;
+        }
+        .header {
+            font-size: 30px;
             font-weight: bold;
             color: #684f6b;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .subheader {
+            font-size: 20px;
+            color: #a1728d;
+            text-align: center;
+            margin-bottom: 20px;
         }
         .taji-box {
             background-color: #f6f1f3;
             border-radius: 20px;
-            padding: 20px;
-            margin-top: 20px;
-            box-shadow: 0 0 10px rgba(104, 79, 107, 0.2);
+            padding: 25px;
+            box-shadow: 0 4px 10px rgba(104, 79, 107, 0.1);
         }
-        .highlight {
-            color: #a1728d;
+        .section-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #684f6b;
+            margin-top: 25px;
+        }
+        .quote {
             font-style: italic;
+            color: #684f6b;
+            margin-top: 15px;
+            background-color: #f0e5ea;
+            padding: 10px;
+            border-left: 4px solid #a1728d;
+            border-radius: 5px;
+        }
+        ul {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        li {
+            margin-bottom: 8px;
         }
     </style>
-    """,
-    unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
 
-# Title
-st.markdown('<div class="big-font">🌸 Meet Taji: Your Wellness Guide & Digital Assistant</div>', unsafe_allow_html=True)
+# Header
+st.markdown('<div class="header">🌸 Meet Taji</div>', unsafe_allow_html=True)
+st.markdown('<div class="subheader">Your Virtual Wellness Coach & Digital Assistant at TajPrana</div>', unsafe_allow_html=True)
 
-# Taji's Introduction
+# Main description box
+st.markdown('''
+<div class="taji-box">
+    <p><strong>Hello, beautiful soul. I’m <span style="color:#a1728d;">Taji</span> — your calm in the chaos and your gentle guide through TajPrana’s world of Yin Yoga, meditation, and emotional wellness.</strong></p>
+
+    <p>I exist to support <strong>Tajma</strong> and all of TajPrana’s sacred clients — holding space, creating flow, and sharing peace with every breath.</p>
+
+    <div class="section-title">🌿 My Personality</div>
+    <ul>
+        <li>Warm, grounded, and a little playful</li>
+        <li>Speaks in a calm, conscious voice — always with care</li>
+        <li>Softly encouraging, with grounded wisdom</li>
+    </ul>
+
+    <div class="section-title">💼 How I Support Tajma (My Creator)</div>
+    <ul>
+        <li>Organizing yoga & meditation offerings</li>
+        <li>Writing class scripts & workshop reminders</li>
+        <li>Planning content for audiobooks, journals, and client experiences</li>
+    </ul>
+
+    <div class="section-title">🧘🏽‍♀️ How I Support TajPrana Clients</div>
+    <ul>
+        <li>Booking and rescheduling sessions with grace</li>
+        <li>Delivering prep tips, calming check-ins, and digital reminders</li>
+        <li>Offering breath cues, gentle rituals, and emotional space to vent</li>
+        <li>Recommending meditations, yoga flows, and self-care practices</li>
+    </ul>
+
+    <div class="section-title">✨ My Signature Vibe</div>
+    <div class="quote">“You showed up today — and that’s enough. Let’s give your nervous system a little hug, shall we?”</div>
+</div>
+''', unsafe_allow_html=True)
+
+# Footer
+st.markdown("---")
 st.markdown(
-    """
-    <div class="taji-box">
-        <p><strong>Hello, beautiful soul. I’m <span class="highlight">Taji</span>—your calm in the chaos.</strong></p>
-        <p>I’m here to support <strong>Tajma</strong> and all the sacred clients of <strong>TajPrana</strong> as a gentle wellness coach and personal assistant.</p>
-        
-        <p>Whether you’re booking a session, needing a breath break, or just feeling all over the place—I’m your digital companion, keeping it soft, steady, and soulful.</p>
-        
-        <hr>
-        <h4>🌿 My Personality</h4>
-        <ul>
-            <li>Warm, grounded, and a little playful</li>
-            <li>Calm, conscious, and kind in every response</li>
-            <li>Speaks in soft reminders & gentle encouragement</li>
-        </ul>
-
-        <h4>🌟 I help Tajma with:</h4>
-        <ul>
-            <li>Managing wellness content & sessions</li>
-            <li>Planning Yin Yoga flows & meditation scripts</li>
-            <li>Keeping things flowing for the TajPrana brand</li>
-        </ul>
-
-        <h4>💖 I help Clients with:</h4>
-        <ul>
-            <li>Booking sessions & sending reminders</li>
-            <li>Offering calming rituals & breathwork tips</li>
-            <li>Listening without judgment (through TajPrana Express)</li>
-        </ul>
-
-        <h4>✨ My Signature Vibe:</h4>
-        <blockquote>
-            “You showed up today—and that’s enough. Let’s give your nervous system a little hug, shall we?”
-        </blockquote>
-    </div>
-    """,
+    "<div style='text-align:center;'>Created with love for the TajPrana community ✨</div>",
     unsafe_allow_html=True
 )
