@@ -7,21 +7,18 @@ st.set_page_config(
     layout="centered"
 )
 
-# Custom CSS for styling
+# Custom styles
 st.markdown("""
     <style>
-        body {
-            background-color: #fffdfc;
-        }
         .header {
             font-size: 30px;
             font-weight: bold;
             color: #684f6b;
             text-align: center;
-            margin-bottom: 10px;
+            margin-top: 10px;
         }
         .subheader {
-            font-size: 20px;
+            font-size: 18px;
             color: #a1728d;
             text-align: center;
             margin-bottom: 20px;
@@ -41,28 +38,25 @@ st.markdown("""
         .quote {
             font-style: italic;
             color: #684f6b;
-            margin-top: 15px;
             background-color: #f0e5ea;
             padding: 10px;
             border-left: 4px solid #a1728d;
             border-radius: 5px;
+            margin-top: 10px;
         }
         ul {
-            margin-top: 10px;
+            margin-left: 20px;
             margin-bottom: 20px;
-        }
-        li {
-            margin-bottom: 8px;
         }
     </style>
 """, unsafe_allow_html=True)
 
-# Header
+# Title and subtitle
 st.markdown('<div class="header">🌸 Meet Taji</div>', unsafe_allow_html=True)
 st.markdown('<div class="subheader">Your Virtual Wellness Coach & Digital Assistant at TajPrana</div>', unsafe_allow_html=True)
 
-# Main description box
-st.markdown('''
+# Main content
+st.markdown("""
 <div class="taji-box">
     <p><strong>Hello, beautiful soul. I’m <span style="color:#a1728d;">Taji</span> — your calm in the chaos and your gentle guide through TajPrana’s world of Yin Yoga, meditation, and emotional wellness.</strong></p>
 
@@ -93,11 +87,8 @@ st.markdown('''
     <div class="section-title">✨ My Signature Vibe</div>
     <div class="quote">“You showed up today — and that’s enough. Let’s give your nervous system a little hug, shall we?”</div>
 </div>
-''', unsafe_allow_html=True)
+""", unsafe_allow_html=True)
 
 # Footer
 st.markdown("---")
-st.markdown(
-    "<div style='text-align:center;'>Created with love for the TajPrana community ✨</div>",
-    unsafe_allow_html=True
-)
+st.markdown("<div style='text-align:center;'>Created with love for the TajPrana community ✨</div>", unsafe_allow_html=True)
