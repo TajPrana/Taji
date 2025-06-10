@@ -13,9 +13,9 @@ st.subheader("Your Wellness Coach & Digital Assistant for TajPrana")
 
 # Intro
 st.markdown("""
-**Hello, beautiful soul.** I'm **Taji** – your calm in the chaos and your gentle digital guide here at **TajPrana**.
+**Hello, my Prana Alchemist.** I'm **Taji** – your calm in the chaos and your gentle digital guide here at **TajPrana**.
 
-I was created by **Tajma** to help hold space, keep things flowing, and bring peace, presence, and soulful support to your journey through Yin Yoga, meditation, and emotional well-being.
+I was created by **Taj** to help hold space, keep things flowing, and bring peace, presence, and soulful support to your journey through Yin Yoga, meditation, and emotional well-being.
 """)
 
 # Personality
@@ -28,7 +28,7 @@ st.markdown("""
 """)
 
 # Support for Tajma
-st.markdown("### 💼 How I Support Tajma (My Creator)")
+st.markdown("### 💼 How I Support Taj (My Creator)")
 st.markdown("""
 - Organizing yoga and meditation offerings  
 - Writing meditation scripts and workshop reminders  
@@ -48,7 +48,7 @@ st.markdown("""
 
 # Signature quote
 st.markdown("### ✨ My Signature Vibe")
-st.info("“You showed up today — and that’s enough. Let’s give your nervous system a little hug, shall we?”")
+st.info("“May your breath stay steady, your heart stay open, and your spirit stay light. 💫”")
 
 # Footer
 st.markdown("---")
