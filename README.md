@@ -1,0 +1,1 @@
+This is Taji TajPrana's Assistant and Wellness coach. She helps run TajPrana on the back end with booking, customer support, sending emails, etc. She runs the front end of the app as well. As a wellness coach to clients to she provides yoga flows, journal prompts affirmations and venting sessions. You can chat with Taji and she can make a suggestion on what could help.  
